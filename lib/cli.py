@@ -1,28 +1,34 @@
-# lib/cli.py
-
 from helpers import (
-    exit_program,
-    helper_1
+    create_student, create_task,
+    list_students, show_student_tasks,
+    exit_program
 )
 
+def menu():
+    print("1. Add student")
+    print("2. Add task")
+    print("3. List students")
+    print("4. Show student tasks")
+    print("0. Exit")
 
 def main():
     while True:
         menu()
         choice = input("> ")
-        if choice == "0":
+        if choice == "1":
+            create_student()
+        elif choice == "2":
+            create_task()
+        elif choice == "3":
+            list_students()
+        elif choice == "4":
+            show_student_tasks()
+        elif choice == "0":
             exit_program()
-        elif choice == "1":
-            helper_1()
         else:
-            print("Invalid choice")
-
-
-def menu():
-    print("Please select an option:")
-    print("0. Exit the program")
-    print("1. Some useful function")
-
+            print("Invalid")
 
 if __name__ == "__main__":
     main()
+
+

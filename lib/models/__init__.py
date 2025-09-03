@@ -1,4 +1,11 @@
-import sqlite3
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
+from .student_models import Base, Student, Task
 
-CONN = sqlite3.connect('company.db')
-CURSOR = CONN.cursor()
+engine = create_engine("sqlite:///lib/students.db")
+Base.metadata.create_all(engine)
+
+Session = sessionmaker(bind=engine)
+session = Session()
+
+
