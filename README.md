@@ -88,5 +88,5 @@ def exit_program():
     exit()
 ```
 
-##NOTE
+##NOTE/INSTRUCTIONS
 To run the project navigate to the project root the folder that contains lib/ cd python-project3 then cd lib to have a path like this python-project3/lib
